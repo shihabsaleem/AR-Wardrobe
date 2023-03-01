@@ -9,7 +9,8 @@ const Navbar = () => {
         <div className="navbar-Left">
           <div className="lang">EN</div>
           <div className="searchNav">
-            Input
+            <input type="text" className="navbar-txt" />
+
             <Search />
           </div>
         </div>
