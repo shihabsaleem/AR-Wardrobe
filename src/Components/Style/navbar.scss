@@ -38,6 +38,12 @@
 
     .navbar-Center {
         flex: 1;
+        .navbar-logo{
+            font-weight: bold;
+            .logo{
+                color: aqua;
+            }
+        }
     }
 
     .navbar-Right {

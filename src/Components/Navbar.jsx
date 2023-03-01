@@ -1,6 +1,7 @@
 import { Search } from "@mui/icons-material";
 import React from "react";
 import "./Style/navbar.scss";
+import logo from "./../"
 
 const Navbar = () => {
   return (
@@ -15,10 +16,9 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-Center">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-          nostrum reprehenderit saepe ipsam cupiditate earum iure cumque, sequi
-          quibusdam optio rem quo placeat mollitia ipsa necessitatibus
-          temporibus repellat, sunt vitae.
+          <div className="navbar-logo">
+           <img className="logo" src="./"
+          </div>
         </div>
         <div className="navbar-Right">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis
