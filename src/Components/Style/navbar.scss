@@ -33,20 +33,43 @@
             .navbar-txt {
                 border: none;
             }
+
+            .input {
+                color: gray;
+                font-size: 14px;
+            }
         }
     }
 
     .navbar-Center {
         flex: 1;
-        .navbar-logo{
+        text-align: center;
+
+        .navbar-logo {
             font-weight: bold;
-            .logo{
-                color: aqua;
+
+            .logo {
+                height: 30px;
+
             }
         }
     }
 
     .navbar-Right {
         flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+
+        .navbar-menu {
+            font-size: 14px;
+            cursor: pointer;
+            margin-left: 25px;
+
+
+
+
+        }
     }
 }
