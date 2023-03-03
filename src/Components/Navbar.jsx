@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-Center">
           <div className="navbar-logo">
-            <img className="logo" src={logo} />
+            <img alt="arwardrobe" className="logo" src={logo} />
           </div>
         </div>
         <div className="navbar-Right">
