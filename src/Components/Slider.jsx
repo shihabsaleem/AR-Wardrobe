@@ -1,9 +1,8 @@
 import {
-  Directions,
   KeyboardArrowLeftOutlined,
   KeyboardArrowRightOutlined,
 } from "@mui/icons-material";
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import "./Style/slider.scss";
 import slider1 from "./../Assets/img0.png";
 import slider2 from "./../Assets/img2.png";
