@@ -1,4 +1,4 @@
-/*import { img0 } from "./Assets/img0.png";
+import { img0 } from "./Assets/img0.png";
 import { img1 } from "./Assets/img1.png";
 import { img2 } from "./Assets/img2.png";
 
@@ -22,5 +22,3 @@ export const sliderItems = [
     desc: "lorem ipsum dolor sit amet",
   },
 ];
-
-*/
