@@ -1,18 +1,22 @@
 import {
+  Directions,
   KeyboardArrowLeftOutlined,
   KeyboardArrowRightOutlined,
 } from "@mui/icons-material";
-import React from "react";
+import React, { useState } from "react";
 import "./Style/slider.scss";
 import slider1 from "./../Assets/img0.png";
 import slider2 from "./../Assets/img2.png";
 import slider3 from "./../Assets/img1.png";
+//import { sliderItems } from "../data";
 
 const Slider = () => {
+  //const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {};
   return (
     <div>
       <div className="slider-container">
-        <div className="arrow left-arrow">
+        <div className="arrow left-arrow" onClick={() => handleClick("left")}>
           <KeyboardArrowLeftOutlined />
         </div>
         <div className="slider-wrapper">
@@ -59,7 +63,7 @@ const Slider = () => {
             </div>
           </div>
         </div>
-        <div className="arrow right-arrow">
+        <div className="arrow right-arrow" onClick={() => handleClick("right")}>
           <KeyboardArrowRightOutlined />
         </div>
       </div>

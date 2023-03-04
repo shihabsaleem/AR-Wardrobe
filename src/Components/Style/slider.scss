@@ -4,7 +4,7 @@
     display: flex;
     background-color: #FFFFFF;
     position: relative;
-   overflow: hidden;
+    overflow: hidden;
 
     .arrow {
         width: 50px;
@@ -25,6 +25,13 @@
     .slider-wrapper {
         height: 100%;
         display: flex;
+        background-color: #e7ffff;
+        transform: translateX(0vw);
+
+        .slides-bg {
+
+            background-color: teal;
+        }
 
         .slides {
             width: 100vw;
