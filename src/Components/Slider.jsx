@@ -5,18 +5,24 @@ import {
 import React, { useState } from "react";
 import "./Style/slider.scss";
 import { sliderItems } from "../data";
-import slider_img from "../Assets/img0.png"
+import slider_img from "../Assets/img0.png";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const handleClick = (direction) => {};
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+  };
   return (
     <div>
       <div className="slider-container">
         <div className="arrow left-arrow" onClick={() => handleClick("left")}>
           <KeyboardArrowLeftOutlined />
         </div>
-        <div className="slider-wrapper">
+        <div className="slider-wrapper" slideIndex >
           {sliderItems.map((item) => (
             <div className="slides" bg={item.bg}>
               <div className="slides-img">
