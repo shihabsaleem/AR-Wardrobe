@@ -5,6 +5,7 @@ import {
 import React, { useState } from "react";
 import "./Style/slider.scss";
 import { sliderItems } from "../data";
+import slider_img from "../Assets/img0.png"
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -19,7 +20,7 @@ const Slider = () => {
           {sliderItems.map((item) => (
             <div className="slides" bg={item.bg}>
               <div className="slides-img">
-                <img src={item.img} alt="slider" />
+                <img src={slider_img} alt="slider" />
               </div>
               <div className="slides-info">
                 <h1 className="title">{item.title}</h1>
