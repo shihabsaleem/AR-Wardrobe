@@ -2,7 +2,7 @@ import { Search } from "@mui/icons-material";
 import React from "react";
 import "./Style/navbar.scss";
 import Badge from "@mui/material/Badge";
-import logo from "./arwlogo.svg";
+import logo from "./../Assets/arwlogo.svg";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const Navbar = () => {
