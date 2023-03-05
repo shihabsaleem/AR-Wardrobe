@@ -22,7 +22,10 @@ const Slider = () => {
         <div className="arrow left-arrow" onClick={() => handleClick("left")}>
           <KeyboardArrowLeftOutlined />
         </div>
-        <div className="slider-wrapper" slideIndex >
+        <div className="arrow right-arrow" onClick={() => handleClick("right")}>
+          <KeyboardArrowRightOutlined />
+        </div>
+        <div className="slider-wrapper" slideIndex>
           {sliderItems.map((item) => (
             <div className="slides" bg={item.bg}>
               <div className="slides-img">
@@ -38,9 +41,6 @@ const Slider = () => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="arrow right-arrow" onClick={() => handleClick("right")}>
-        <KeyboardArrowRightOutlined />
       </div>
     </div>
   );

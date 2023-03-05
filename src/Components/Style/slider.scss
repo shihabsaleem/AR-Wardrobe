@@ -75,10 +75,12 @@
 
     .left-arrow {
         left: 10px;
+        z-index: 10;
     }
 
     .right-arrow {
         right: 10px;
+        z-index: 10;
 
     }
 }
