@@ -5,7 +5,6 @@ import {
 import React, { useState } from "react";
 import "./Style/slider.scss";
 import { sliderItems } from "../data";
-//import slider_img from "../Assets/img0.png";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
