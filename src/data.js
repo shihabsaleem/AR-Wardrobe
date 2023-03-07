@@ -14,13 +14,13 @@ export const sliderItems = [
     title: "Summer Sale",
     image: sl2,
     desc: "lorem ipsum dolor sit amet",
-    bg: "#e7ffff",
+    bg: "#e7ccff",
   },
   {
     id: 3,
     title: "Winter Sale",
     image: sl3,
     desc: "lorem ipsum dolor sit amet",
-    bg: "#e7ffff",
+    bg: "#e7eeff",
   },
 ];

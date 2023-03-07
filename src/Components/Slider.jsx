@@ -24,7 +24,11 @@ const Slider = () => {
         <div className="arrow right-arrow" onClick={() => handleClick("right")}>
           <KeyboardArrowRightOutlined />
         </div>
-        <div className="slider-wrapper" slideIndex>
+        <div
+          className="slider-wrapper"
+          
+          style={{ transform: `translateX(-${slideIndex * 100}vw)` }}slideIndex
+        >
           {sliderItems.map((item) => (
             <div className="slides" bg={item.bg}>
               <div className="slides-img">
