@@ -26,6 +26,7 @@
         height: 100%;
         display: flex;
         background-color: #e7ffff;
+transition: all 1.5s ease-out ;
         transform: translateX(0vw);
 
         .slides-bg {

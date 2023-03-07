@@ -2,7 +2,7 @@ import {
   KeyboardArrowLeftOutlined,
   KeyboardArrowRightOutlined,
 } from "@mui/icons-material";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Style/slider.scss";
 import { sliderItems } from "../data";
 
@@ -15,6 +15,18 @@ const Slider = () => {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
+
+  // Auto sliding functionality
+  const autoSlide = () => {
+    setSlideIndex((slideIndex) =>
+      slideIndex < sliderItems.length - 1 ? slideIndex + 1 : 0
+    );
+  };
+
+  useEffect(() => {
+    const interval = setInterval(autoSlide, 3000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <div>
       <div className="slider-container">
@@ -26,8 +38,8 @@ const Slider = () => {
         </div>
         <div
           className="slider-wrapper"
-          
-          style={{ transform: `translateX(-${slideIndex * 100}vw)` }}slideIndex
+          style={{ transform: `translateX(-${slideIndex * 100}vw)` }}
+          slideIndex
         >
           {sliderItems.map((item) => (
             <div className="slides" bg={item.bg}>
