@@ -46,4 +46,18 @@ export const item = [
     description: "Product Description",
     price: "$19.99",
   },
+  {
+    id:4,
+    image: sl1,
+    title: "Product Title",
+    description: "Product Description",
+    price: "$19.99",
+  },
+  {
+    id:1,
+    image: sl1,
+    title: "Product Title",
+    description: "Product Description",
+    price: "$19.99",
+  },
 ];
