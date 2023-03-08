@@ -26,36 +26,36 @@ export const sliderItems = [
 ];
 export const item = [
   {
-    id:1,
+    id: 1,
     image: sl1,
     title: "Product Title",
     description: "Product Description",
     price: "$19.99",
   },
   {
-    id:2,
+    id: 2,
     image: sl2,
     title: "Product Title",
     description: "Product Description",
     price: "$19.99",
   },
   {
-    id:3,
+    id: 3,
     image: sl3,
     title: "Product Title",
     description: "Product Description",
     price: "$19.99",
   },
   {
-    id:4,
+    id: 4,
     image: sl1,
     title: "Product Title",
     description: "Product Description",
     price: "$19.99",
   },
   {
-    id:1,
-    image: sl1,
+    id: 5,
+    image: sl2,
     title: "Product Title",
     description: "Product Description",
     price: "$19.99",
