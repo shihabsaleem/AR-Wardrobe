@@ -24,16 +24,26 @@ export const sliderItems = [
     bg: "#e7eeff",
   },
 ];
-
-export const categories = [
+export const item = [
   {
-    id: 1,
-    img: sl1,
-    title: "Shirt",
+    id:1,
+    image: sl1,
+    title: "Product Title",
+    description: "Product Description",
+    price: "$19.99",
   },
   {
-    id: 2,
-    img: sl2,
-    title: "Short",
+    id:2,
+    image: sl2,
+    title: "Product Title",
+    description: "Product Description",
+    price: "$19.99",
+  },
+  {
+    id:3,
+    image: sl3,
+    title: "Product Title",
+    description: "Product Description",
+    price: "$19.99",
   },
 ];

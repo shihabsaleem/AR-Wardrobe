@@ -3,6 +3,7 @@ import "./../Components/Style/home.scss"
 import Navbar from '../Components/Navbar'
 import Announce from '../Components/Announce'
 import Slider from '../Components/Slider'
+import Categories from '../Components/Categories'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
       <Announce/>
       <Navbar/>
       <Slider/>
+      <Categories/>
     </div>
   )
 }
