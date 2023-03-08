@@ -5,7 +5,7 @@ import ItemCat from "./ItemCat";
 
 const Categories = () => {
   return (
-    <div>
+    <div className="cards">
       {item.map((item) => (
         <ItemCat item={item} />
       ))}
