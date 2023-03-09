@@ -9,7 +9,7 @@ const ItemCat = ({ item }) => {
         <h2>{item.title}</h2>
         <p>{item.description}</p>
         <span>{item.price}</span>
-        <button>Add to Cart</button>
+        <button>Show</button>
       </div>
     </div>
   );
