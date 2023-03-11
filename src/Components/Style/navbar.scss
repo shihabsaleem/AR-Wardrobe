@@ -63,13 +63,19 @@
 
 
         .navbar-menu {
-            font-size: 14px;
+            font-size: 14px !important;
             cursor: pointer;
             margin-left: 25px;
+            text-decoration: none;
+            color: gray;
+            text-transform: uppercase;
+            font-weight: 400;
+            transition: cubic-bezier(0.755, 0.05, 0.855, 0.06);
 
-
-
-
+            &:hover {
+                color: teal;
+                transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+            }
         }
     }
 }
