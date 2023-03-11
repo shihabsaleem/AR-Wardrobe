@@ -3,8 +3,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f2f2f2;
+    //background: #f2f2f2;
+    background-image: url('https://source.unsplash.com/random/1920x1080');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
+
 
 .login-container {
     background: #fff;
@@ -76,9 +81,10 @@
 
     @media screen and (max-width: 480px) {
         width: 90%;
-    .none{
-        display: none;
-    }
+
+        .none {
+            display: none;
+        }
 
     }
 }
