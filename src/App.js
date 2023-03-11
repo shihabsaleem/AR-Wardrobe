@@ -2,21 +2,21 @@ import "./App.css";
 import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import NoPage from "./Pages/NoPage";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from "./Pages/Register";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router>
         <Routes>
-          <Route path="/" element={<Home />}>
-            <Route index element={<Home />} />
-            <Route path="blogs" element={<Login />} />
-            <Route path="contact" element={<Home />} />
-            <Route path="*" element={<NoPage />} />
-          </Route>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<NoPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="*" element={<NoPage />} />
         </Routes>
-      </BrowserRouter>{" "}
+      </Router>
     </div>
   );
 }

@@ -1,12 +1,19 @@
-import React from 'react'
-import error404 from "./../Assets/error404.svg"
+import { height } from "@mui/system";
+import React from "react";
+import error404 from "./../Assets/error404.svg";
+<style>
+
+.notfound{
+    height
+}
+    </style>
 
 const NoPage = () => {
   return (
-    <div>
-        <error404 alt="credit - rafiki"/>
+    <div className="notfound">
+      <img src={error404} alt="crdit rafiki" />
     </div>
-  )
-}
+  );
+};
 
-export default NoPage
+export default NoPage;
