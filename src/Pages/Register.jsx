@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import VisibilityIcon from "@mui/icons-material/Visibility";
+import { Link } from "react-router-dom";
 
 function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -37,6 +37,10 @@ function Register() {
 
           <button type="submit">Sign up</button>
         </form>
+        <div className="signin-link">
+          <p>Already have an account?</p>
+          <Link to="/signin">Sign in</Link>
+        </div>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ $card-width: 400px;
     grid-template-columns: repeat(auto-fit, minmax(#{$card-width}, 1fr));
     grid-gap: #{$grid-gap};
     z-index: 5;
+    padding: 15px;
 }
 
 .product-container {
