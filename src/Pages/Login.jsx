@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './login.scss';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./login.scss";
 
 function Login() {
   return (
@@ -16,7 +16,9 @@ function Login() {
 
           <button type="submit">Log In</button>
         </form>
-        <p>Don't have an account yet? <Link to="/register">Sign Up</Link></p>
+        <p>
+          Don't have an account yet? <Link to="/register">Sign Up</Link>
+        </p>
       </div>
     </div>
   );
