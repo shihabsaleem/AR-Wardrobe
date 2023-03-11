@@ -28,7 +28,7 @@ function Register() {
             />
             <button
               type="button"
-              className="password-toggle-btn"
+              className="password-toggle-btn none"
               onClick={togglePasswordVisibility}
             >
               {showPassword ? "Hide" : "Show"}
