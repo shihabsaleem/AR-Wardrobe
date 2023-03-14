@@ -24,6 +24,7 @@ export const sliderItems = [
     bg: "#e7eeff",
   },
 ];
+
 export const item = [
   {
     id: 1,
