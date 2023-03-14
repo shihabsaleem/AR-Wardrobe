@@ -5,6 +5,7 @@ import Announce from "../Components/Announce";
 import Slider from "../Components/Slider";
 import Categories from "../Components/Categories";
 import Footer from "../Components/Footer";
+import ProCat from "../Components/ProCat";
 
 const Home = () => {
   return (
@@ -12,6 +13,8 @@ const Home = () => {
       <Announce />
       <Navbar />
       <Slider />
+      <ProCat/>{/* */}
+     
       <Categories />
       <Footer />
     </div>
