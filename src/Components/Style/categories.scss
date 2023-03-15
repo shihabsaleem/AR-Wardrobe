@@ -50,7 +50,7 @@ $card-width: 300px;
         img {
             width: 100%;
             height: auto;
-           // margin-bottom: 16px;
+            // margin-bottom: 16px;
             transition: transform 0.3s ease;
             max-height: 250px;
 
@@ -116,6 +116,14 @@ $card-width: 300px;
 
 @media(max-width:456px) {
     .product-container {
-        .product-card {}
+        .product-card {
+            img {
+                width: 100%;
+                height: auto;
+
+                transition: transform 0.3s ease;
+                max-height: 200px;
+            }
+        }
     }
 }
