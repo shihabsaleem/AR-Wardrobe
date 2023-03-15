@@ -4,6 +4,8 @@ import Login from "./Pages/Login";
 import NoPage from "./Pages/NoPage";
 import Register from "./Pages/Register";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Profile from "./Pages/UserProf";
+
 
 function App() {
   return (
@@ -14,6 +16,7 @@ function App() {
           <Route path="/about" element={<NoPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Router>
