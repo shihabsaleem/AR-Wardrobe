@@ -1,5 +1,5 @@
 $grid-gap: 10px;
-$card-width: 400px;
+$card-width: 300px;
 
 .cards {
     display: grid;
@@ -50,9 +50,9 @@ $card-width: 400px;
         img {
             width: 100%;
             height: auto;
-            margin-bottom: 16px;
+           // margin-bottom: 16px;
             transition: transform 0.3s ease;
-            max-height: 300px;
+            max-height: 250px;
 
             &:hover {
                 transform: scale(1.1);
