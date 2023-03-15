@@ -42,7 +42,8 @@ $card-width: 400px;
 
             }
         }
-        .product-det{
+
+        .product-det {
             flex-direction: column;
         }
 
@@ -107,5 +108,14 @@ $card-width: 400px;
         &:hover::before {
             opacity: 1;
         }
+    }
+}
+
+
+
+
+@media(max-width:456px) {
+    .product-container {
+        .product-card {}
     }
 }
