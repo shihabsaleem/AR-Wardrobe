@@ -32,6 +32,7 @@ function Login() {
           Don't have an account yet? <Link to="/register">Sign Up</Link>
         </p>
       </div>
+      
     </div>
   );
 }
