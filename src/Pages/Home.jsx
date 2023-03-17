@@ -13,7 +13,7 @@ const Home = () => {
       <Announce />
       <Navbar />
       <Slider />
-      <ProCat/>{/* */}
+      <ProCat/>
      
       <Categories />
       <Footer />
