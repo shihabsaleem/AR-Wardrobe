@@ -69,7 +69,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2023, Ecommerce Site. All rights reserved.</p>
+        <p>&copy; 2023, AR Wardrobe. All rights reserved.</p>
       </div>
     </footer>
   );

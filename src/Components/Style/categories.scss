@@ -7,6 +7,8 @@ $card-width: 400px;
     grid-gap: #{$grid-gap};
     z-index: 5;
     padding: 15px;
+    left: 0;
+    right:0;
 }
 
 .product-container {
