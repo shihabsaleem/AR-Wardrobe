@@ -3,8 +3,10 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import NoPage from "./Pages/NoPage";
 import Register from "./Pages/Register";
+import Category from "./Pages/SingleCat";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserProf from "./Pages/UserProf";
+import SingleCat from "./Pages/SingleCat";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
           <Route path="/about" element={<NoPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<UserProf/>} />
+          <Route path="/profile" element={<UserProf />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/single" element={<SingleCat />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Router>
