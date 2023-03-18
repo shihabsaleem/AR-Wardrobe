@@ -7,6 +7,8 @@ import Category from "./Pages/SingleCat";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserProf from "./Pages/UserProf";
 import SingleCat from "./Pages/SingleCat";
+import Product from "./Pages/Product";
+
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
           <Route path="/profile" element={<UserProf />} />
           <Route path="/category" element={<Category />} />
           <Route path="/single" element={<SingleCat />} />
+          <Route path="/pro" element={<Product/>} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Router>
