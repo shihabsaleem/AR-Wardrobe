@@ -62,3 +62,32 @@ export const item = [
     price: 19.99,
   },
 ];
+
+const products = [
+  {
+    id: 1,
+    name: "Product A",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    price: 19.99,
+    image: sl1,
+  },
+  {
+    id: 2,
+    name: "Product B",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    price: 29.99,
+    image: sl2,
+  },
+  {
+    id: 3,
+    name: "Product C",
+    description:
+      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    price: 39.99,
+    image: sl2,
+  },
+  // more products...
+];
+
+export default products;
