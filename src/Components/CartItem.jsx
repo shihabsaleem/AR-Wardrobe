@@ -5,8 +5,8 @@ import { item } from "../data";
 const CartItem = () => {
   const [items, setItems] = useState([]);
 
-  const addItem = (product) => {
-    setItems([...items, product]);
+  const addItem = (product, quantity) => {
+    setItems([...items, { ...product, quantity }]);
   };
 
   const removeItem = (index) => {
@@ -18,7 +18,7 @@ const CartItem = () => {
   const calculateTotal = () => {
     let total = 0;
     items.forEach((item) => {
-      total += item.price;
+      total += item.price * item.quantity;
     });
     return total;
   };
@@ -36,7 +36,9 @@ const CartItem = () => {
               <div>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                <p>{item.price}</p>
+                <p>
+                  {item.price} x {item.quantity}
+                </p>
                 <button onClick={() => removeItem(index)}>Remove</button>
               </div>
             </li>
@@ -53,7 +55,23 @@ const CartItem = () => {
               <h3>{product.title}</h3>
               <p>{product.description}</p>
               <p>{product.price}</p>
-              <button onClick={() => addItem(product)}>Add to cart</button>
+              <div>
+                <label htmlFor={`quantity_${product.id}`}>Quantity:</label>
+                <select
+                  id={`quantity_${product.id}`}
+                  defaultValue="1"
+                  onChange={(event) =>
+                    addItem(product, parseInt(event.target.value))
+                  }
+                >
+                  {[1, 2, 3, 4, 5].map((quantity) => (
+                    <option key={quantity} value={quantity}>
+                      {quantity}
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <button onClick={() => addItem(product, 1)}>Add to cart</button>
             </div>
           </li>
         ))}
