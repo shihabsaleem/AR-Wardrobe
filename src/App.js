@@ -8,6 +8,8 @@ import Category from "./Pages/SingleCat";
 import UserProf from "./Pages/UserProf";
 import Cart from "./Pages/Cart";
 import SingleCat from "./Pages/SingleCat";
+import Product from "./Pages/Product";
+
 
 function App() {
   return (
@@ -22,6 +24,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/category" element={<Category />} />
           <Route path="/single" element={<SingleCat />} />
+          <Route path="/pro" element={<Product/>} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Router>
