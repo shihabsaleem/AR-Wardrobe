@@ -7,7 +7,7 @@ const SingleItem = () => {
   return (
     <div className="single-item">
       {products.map((product) => (
-        <Link to={`/product/${product.id}`}>
+        <Link to={`/single/${product.id}`}>
           <div key={product.id}>
             <img src={product.image} alt={product.name} />
             <h2>{product.name}</h2>
