@@ -9,9 +9,7 @@ const Category = () => {
     <div>
       <Announce />
       <Navbar />
-      {/*
-    
-  */}
+
       <SingleItem />
       <Footer />
     </div>

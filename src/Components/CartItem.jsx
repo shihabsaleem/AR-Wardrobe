@@ -1,65 +1,79 @@
 import React, { useState } from "react";
 import "./Style/cart.scss";
+import { item } from "../data";
 
-function CartItem() {
-  // Define state for cart items and total cost
-  const [cartItems, setCartItems] = useState([]);
-  const [totalCost, setTotalCost] = useState(0);
+const CartItem = () => {
+  const [items, setItems] = useState([]);
 
-  // Function to add item to cart
-  const addToCart = (item) => {
-    // Check if item is already in cart
-    const existingItem = cartItems.find((cartItem) => cartItem.id === item.id);
-
-    if (existingItem) {
-      // If item already exists in cart, increase quantity
-      const updatedCartItems = cartItems.map((cartItem) => {
-        if (cartItem.id === item.id) {
-          return { ...cartItem, quantity: cartItem.quantity + 1 };
-        }
-        return cartItem;
-      });
-      setCartItems(updatedCartItems);
-    } else {
-      // If item does not exist in cart, add to cart with quantity of 1
-      setCartItems([...cartItems, { ...item, quantity: 1 }]);
-    }
-
-    // Update total cost
-    setTotalCost(totalCost + item.price);
+  const addItem = (product, quantity) => {
+    setItems([...items, { ...product, quantity }]);
   };
 
-  // Function to remove item from cart
-  const removeFromCart = (item) => {
-    // Filter out the item to remove from cart
-    const updatedCartItems = cartItems.filter(
-      (cartItem) => cartItem.id !== item.id
-    );
-    setCartItems(updatedCartItems);
+  const removeItem = (index) => {
+    const newItems = [...items];
+    newItems.splice(index, 1);
+    setItems(newItems);
+  };
 
-    // Update total cost
-    setTotalCost(totalCost - item.price * item.quantity);
+  const calculateTotal = () => {
+    let total = 0;
+    items.forEach((item) => {
+      total += item.price * item.quantity;
+    });
+    return total;
   };
 
   return (
-    <div className="cart-item">
-      <h2>Product Cart</h2>
-      <p>Total Cost: {totalCost}</p>
-      <ul>
-        {cartItems.map((item) => (
-          <li key={item.id}>
-            {item.name} ({item.quantity}) - ${item.price * item.quantity}
-            <button onClick={() => removeFromCart(item)}>Remove</button>
-          </li>
-        ))}
-      </ul>
-      <button
-        onClick={() => addToCart({ id: 1, name: "Product 1", price: 10 })}
-      >
-        Add to Cart
-      </button>
+    <div className="cart">
+      <h2>Shopping Cart</h2>
+      <div className="cart-container">
+        <div className="cart-items">
+          {items.length === 0 ? (
+            <p>No items in cart.</p>
+          ) : (
+            <ul>
+              {items.map((item, index) => (
+                <li key={index}>
+                  <img src={item.image} alt={item.title} />
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <p>{item.price}</p>
+                    <button onClick={() => removeItem(index)}>Remove</button>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
+          <h3>Total: {calculateTotal()}</h3>
+        </div>
+        <div className="cart-controls">
+          <h3>Available items:</h3>
+          <ul>
+            {item.map((product) => (
+              <li key={product.id}>
+                <img src={product.image} alt={product.title} />
+                <div>
+                  <h3>{product.title}</h3>
+                  <p>{product.description}</p>
+                  <p>{product.price}</p>
+                </div>
+                <div className="controls">
+                  <select>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                  <button onClick={() => addItem(product)}>Add to cart</button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
-}
+  
+};
 
 export default CartItem;

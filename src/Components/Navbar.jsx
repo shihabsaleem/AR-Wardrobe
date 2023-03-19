@@ -32,9 +32,11 @@ const Navbar = () => {
           <Link to="/register" className="navbar-menu">
             Register
           </Link>
-          <Badge className="navbar-menu" badgeContent={4} color="primary">
-            <ShoppingCartOutlinedIcon color="action" />
-          </Badge>
+          <Link to="/cart" className="navbar-menu">
+            <Badge className="navbar-menu" badgeContent={0} color="primary">
+              <ShoppingCartOutlinedIcon color="action" />
+            </Badge>
+          </Link>
         </div>
       </div>
     </div>
