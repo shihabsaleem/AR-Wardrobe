@@ -6,7 +6,8 @@ const CartItem = () => {
   const [items, setItems] = useState([]);
 
   const addItem = (product, quantity) => {
-    setItems([...items, { ...product, quantity }]);
+    setItems([...items, { ...product, quantity: parseInt(quantity, 10) }]);
+    
   };
 
   const removeItem = (index) => {
@@ -18,7 +19,7 @@ const CartItem = () => {
   const calculateTotal = () => {
     let total = 0;
     items.forEach((item) => {
-      total += item.price * item.quantity;
+      total += item.price; //* item.quantity;
     });
     return total;
   };
@@ -38,7 +39,12 @@ const CartItem = () => {
                   <div>
                     <h3>{item.title}</h3>
                     <p>{item.description}</p>
-                    <p>{item.price}</p>
+                    <p>
+                      <span>
+                        <b>{"\u20B9"} </b>
+                      </span>
+                      {item.price}
+                    </p>
                     <button onClick={() => removeItem(index)}>Remove</button>
                   </div>
                 </li>
@@ -56,13 +62,16 @@ const CartItem = () => {
                 <div>
                   <h3>{product.title}</h3>
                   <p>{product.description}</p>
-                  <p>{product.price}</p>
+                  <p>
+                    <span>{"\u20B9"} </span>
+                    {product.price}
+                  </p>
                 </div>
                 <div className="controls">
-                  <select>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                  <select onChange={(e) => addItem(product, e.target.value)}>
+                    <option value={1}>1</option>
+                    <option value={2}>2</option>
+                    <option value={3}>3</option>
                   </select>
                   <button onClick={() => addItem(product)}>Add to cart</button>
                 </div>
@@ -73,7 +82,6 @@ const CartItem = () => {
       </div>
     </div>
   );
-  
 };
 
 export default CartItem;
