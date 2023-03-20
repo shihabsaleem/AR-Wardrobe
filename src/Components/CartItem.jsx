@@ -7,7 +7,6 @@ const CartItem = () => {
 
   const addItem = (product, quantity) => {
     setItems([...items, { ...product, quantity: parseInt(quantity, 10) }]);
-    
   };
 
   const removeItem = (index) => {
@@ -54,7 +53,7 @@ const CartItem = () => {
           <h3>Total: {calculateTotal()}</h3>
         </div>
         <div className="cart-controls">
-          <h3>Available items:</h3>
+          <h3>Recommended items:</h3>
           <ul>
             {item.map((product) => (
               <li key={product.id}>
