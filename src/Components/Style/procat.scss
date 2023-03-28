@@ -1,0 +1,78 @@
+.catpad {
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    margin-right: 10px;
+    margin-left: 10px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: #333333;
+    transition: transform 0.2s ease-in-out;
+  
+    &:hover {
+      transform: scale(1.1);
+    }
+    .catg {
+        // width: 400px;
+  display: flex;
+  justify-content: center;
+  //align-items: center;
+  color: teal;
+  font-size: 150px;
+  padding-left: 45px;
+  
+}
+
+  }
+  
+  .slick-slide > div {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slick-dots li button:before {
+    font-size: 14px;
+    color: #333333;
+    opacity: 0.3;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    opacity: 1;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .catpad {
+      height: 150px;
+      font-size: 40px;
+  
+      .catg {
+        font-size: 100px;
+        padding-left: 30px;
+      }
+    }
+  
+    .slick-slide > div {
+      height: 150px;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .catpad {
+      height: 100px;
+      font-size: 30px;
+  
+      .catg {
+        font-size: 70px;
+        padding-left: 20px;
+      }
+    }
+  
+    .slick-slide > div {
+      height: 100px;
+    }
+  }

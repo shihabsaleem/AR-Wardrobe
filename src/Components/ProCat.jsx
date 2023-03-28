@@ -2,6 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { BsSunglasses } from "react-icons/bs";
+
+import { FaHatCowboy,FaTshirt } from "react-icons/fa";
+import {GiHeartNecklace,GiTrousers,GiShorts } from "react-icons/gi";
+import "../Components/Style/procat.scss";
 const settings = {
   dots: false,
   infinite: true,
@@ -10,8 +15,8 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
-  prevArrow:null,
-  nextArrow:null,
+  prevArrow: null,
+  nextArrow: null,
   responsive: [
     {
       breakpoint: 768,
@@ -32,25 +37,25 @@ const Product_category = () => {
   return (
     <div>
       <Slider {...settings}>
-        <div>
-          <img src="https://via.placeholder.com/400x300" alt="Slide 1" />
+        <div className="catpad">
+          <BsSunglasses className="catg"/>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400x300" alt="Slide 2" />
+        <div className="catpad">
+          <FaHatCowboy className="catg" />
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400x300" alt="Slide 3" />
+        <div className="catpad">
+          <GiHeartNecklace className="catg" />
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400x300" alt="Slide 4" />
+        <div className="catpad">
+          <FaTshirt className="catg"/>
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400x300" alt="Slide 5" />
+        <div className="catpad">
+          <GiTrousers className="catg" />
         </div>
-        <div>
-          <img src="https://via.placeholder.com/400x300" alt="Slide 6" />
+        <div className="catpad">
+          <GiShorts className="catg"/>
         </div>
-      </Slider>
+             </Slider>
     </div>
   );
 };
