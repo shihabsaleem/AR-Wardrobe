@@ -25,7 +25,7 @@ function ProductDetails() {
 
         <div className="discription">
           <h2>{selectedProduct.name}</h2>
-          <p>{selectedProduct.longdesc}</p>
+          <p>{selectedProduct.long4desc}</p>
           <p className="price">Price: ${selectedProduct.price}</p>
           <label htmlFor="size">Size:</label>
           <select id="size" value={selectedSize} onChange={handleSizeChange}>
