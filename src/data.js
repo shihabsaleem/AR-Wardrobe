@@ -63,6 +63,37 @@ export const item = [
   },
 ];
 
+
+// categories data..........................................
+
+const categories =[
+  {
+    id:1,
+    cat:"specs"
+  },
+  {
+    id:2,
+    cat:"hat"
+  },
+  {
+    id:3,
+    cat:"chain"
+  },
+  {
+    id:4,
+    cat:"t-shirt"
+  },
+  {
+    id:5,
+    cat:"pant"
+  },
+  {
+    id:6,
+    cat:"shorts"
+  }
+]
+// category data end............................................
+
 const products = [
   {
     id: 1,
