@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./../Components/Style/profile.scss";
+import img from "../Assets/img0.png";
 
 const Profile = () => {
   const [customerData, setCustomerData] = useState({});
@@ -51,11 +52,13 @@ const Profile = () => {
       <h1>Customer Profile</h1>
       {!isEditing && (
         <div className="display">
-          <img src={customerData.profilePic} alt={customerData.name} />
-          <p>{customerData.name}.</p>
-          <p>{customerData.email}.</p>
-          <p>{customerData.address}.</p>
-          <p>{customerData.pinCode}.</p>
+          {/* <img src={customerData.profilePic} alt={customerData.name} /> */}
+
+          <img src={img} alt={customerData.name} />
+          <p>{customerData.name}Shihab</p>
+          <p>{customerData.email}shihab@email.com</p>
+          <p>{customerData.address}Palakkad,Kerala</p>
+          <p>{customerData.pinCode}678501</p>
           <button onClick={handleEditToggle}>Edit Profile</button>
         </div>
       )}
