@@ -9,14 +9,14 @@ import UserProf from "./Pages/UserProf";
 import Cart from "./Pages/Cart";
 import SingleCat from "./Pages/SingleCat";
 import Product from "./Pages/Product";
-
+import Try from "./Pages/ARTryOn";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home/>} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<NoPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
@@ -24,7 +24,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/category" element={<Category />} />
           <Route path="/single" element={<SingleCat />} />
-          <Route path="/pro" element={<Product/>} />
+          <Route path="/pro" element={<Product />} />
+          <Route path="/try" element={<Try />} />
           <Route path="*" element={<NoPage />} />
         </Routes>
       </Router>

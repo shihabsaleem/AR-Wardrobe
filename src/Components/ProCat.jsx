@@ -3,9 +3,10 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BsSunglasses } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-import { FaHatCowboy,FaTshirt } from "react-icons/fa";
-import {GiHeartNecklace,GiTrousers,GiShorts } from "react-icons/gi";
+import { FaHatCowboy, FaTshirt } from "react-icons/fa";
+import { GiHeartNecklace, GiTrousers, GiShorts } from "react-icons/gi";
 import "../Components/Style/procat.scss";
 const settings = {
   dots: false,
@@ -38,30 +39,65 @@ const Product_category = () => {
     <div>
       <Slider {...settings}>
         <div className="catpad">
-          <BsSunglasses className="catg"/>
-          <div className="c-button" onClick="display-cat()"> <p>Sunglasses </p></div>
+          <Link to="/pro" className="navbar-menu">
+            <BsSunglasses className="catg" />
+            <div className="c-button" onClick="display-cat()">
+              {" "}
+              <p>Sunglasses </p>
+            </div>
+          </Link>
         </div>
+
         <div className="catpad">
-          <FaHatCowboy className="catg" />
-          <div className="c-button" onClick="display-cat()"> <p>Hat </p></div>
+          <Link to="/pro" className="navbar-menu">
+            <FaHatCowboy className="catg" />
+            <div className="c-button" onClick="display-cat()">
+              {" "}
+              <p>Hat </p>
+            </div>
+          </Link>
         </div>
+
         <div className="catpad">
-          <GiHeartNecklace className="catg" />
-          <div className="c-button" onClick="display-cat()"> <p>Chain</p></div>
+          <Link to="/pro" className="navbar-menu">
+            <GiHeartNecklace className="catg" />
+            <div className="c-button" onClick="display-cat()">
+              {" "}
+              <p>Chain</p>
+            </div>
+          </Link>
         </div>
+
         <div className="catpad">
-          <FaTshirt className="catg"/>
-          <div className="c-button" onClick="display-cat()"> <p>T-shirt</p></div>
+          <Link to="/pro" className="navbar-menu">
+            <FaTshirt className="catg" />
+            <div className="c-button" onClick="display-cat()">
+              {" "}
+              <p>T-shirt</p>
+            </div>
+          </Link>
         </div>
+
         <div className="catpad">
-          <GiTrousers className="catg" />
-          <div className="c-button" onClick="display-cat()"> <p>Pant</p></div>
+          <Link to="/pro" className="navbar-menu">
+            <GiTrousers className="catg" />
+            <div className="c-button" onClick="display-cat()">
+              {" "}
+              <p>Pant</p>
+            </div>
+          </Link>
         </div>
+
         <div className="catpad">
-          <GiShorts className="catg"/>
-          <div className="c-button" onClick="display-cat()"> <p>Shorts</p></div>
+          <Link to="/pro" className="navbar-menu">
+            <GiShorts className="catg" />
+            <div className="c-button" onClick="display-cat()">
+              {" "}
+              <p>Shorts</p>
+            </div>
+          </Link>
         </div>
-             </Slider>
+      </Slider>
     </div>
   );
 };
