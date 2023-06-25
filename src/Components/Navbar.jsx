@@ -26,7 +26,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-Right">
-          <button onClick={()=>window.open('./examples/index.html','_blank')}>Try Now</button>
+          {/* <button onClick={()=>window.open('./examples/index.html','_blank')}>Try Now</button> */}
           <Link to="/login" className="navbar-menu">
             Login
           </Link>
