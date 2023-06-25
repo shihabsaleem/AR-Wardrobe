@@ -28,6 +28,7 @@ function App() {
           <Route path="/single" element={<SingleCat />} />
           <Route path="/pro" element={<Product/>} />
           {/* <Route path="/ar" element={<Ar/>} /> */}
+      
           <Route path="*" element={<NoPage />} />
           
 

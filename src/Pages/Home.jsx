@@ -14,7 +14,6 @@ const Home = () => {
       <Navbar />
       <Slider />
       <ProCat/>
-     
       <Categories />
       <Footer />
     </div>
