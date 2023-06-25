@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import products from "../data";
+import {item} from "../data";
 import "../Components/Style/productdetails.scss";
 import { useNavigate } from "react-router-dom";
 
 function ProductDetails() {
   const [selectedSize, setSelectedSize] = useState("S"); // default size
-
+  const current = localStorage.getItem('id')
   const navigate = useNavigate();
-
+  const products = item;
   const handleSizeChange = (e) => {
     setSelectedSize(e.target.value);
   };
@@ -17,12 +17,13 @@ function ProductDetails() {
     console.log("Trying product...");
   };
 
-  const selectedProduct = products.find((product) => product.id === 1); // select product with ID of 1
+  const selectedProduct = products.find((product) => product.id === parseInt(current)); // select product with ID of 1
 
   return (
     <div>
       <div className="product-item">
         <div key={selectedProduct.id}>
+        
           <img src={selectedProduct.image} alt={selectedProduct.name} />
         </div>
 
