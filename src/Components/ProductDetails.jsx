@@ -37,7 +37,6 @@ function ProductDetails() {
             <option value="L">L</option>
             <option value="XL">XL</option>
           </select>
-          {/* <button onClick={handleTryNow}>Try Now</button> */}
           <button onClick={()=>window.open('./examples/specs1.html','_blank')}>Try Now</button>
           <button>Add to Cart</button>{" "}
         </div>
