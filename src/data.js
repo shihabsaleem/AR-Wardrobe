@@ -2,7 +2,10 @@ import sl1 from "./Assets/img0.png";
 import sl2 from "./Assets/img1.png";
 import sl3 from "./Assets/img2.png";
 import sl4 from "./Assets/sunglass.jpg";
-import sl5 from "./Assets/specs.jpg"
+import sl5 from "./Assets/specs.jpg";
+import sl6 from "./Assets/nosering.webp";
+import sl7 from "./Assets/earings.jpg";
+import sl8 from "./Assets/tshirt.avif";
 export const sliderItems = [
   {
     id: 1,
@@ -30,38 +33,38 @@ export const sliderItems = [
 export const item = [
   {
     id: 1,
-    image: sl4,
-    title: "Sunglass",
-    description: "black sunglass",
-    price: 330.49,
-  },
-  {
-    id: 2,
     image: sl5,
     title: "Specs",
     description: "solic black frame",
-    price: 400.99,
+    price: 299.99,
+  },
+  {
+    id: 2,
+    image: sl4,
+    title: "Sunglass",
+    description: "solic black sunglass",
+    price: 399.99,
   },
   {
     id: 3,
-    image: sl3,
-    title: "Product Title",
-    description: "Product Description",
-    price: 19.98,
+    image: sl6,
+    title: "Nose Ring",
+    description: "Silver nose ring",
+    price: 49.99,
   },
   {
-    id: 4,
-    image: sl1,
-    title: "Product Title",
-    description: "Product Description",
-    price: 19.99,
+    id:4,
+    image: sl7,
+    title: "Earrings",
+    description: "White Earrings",
+    price: 39.99,
   },
   {
     id: 5,
-    image: sl2,
-    title: "Product Title",
-    description: "Product Description",
-    price: 19.99,
+    image: sl8,
+    title: "T-Shirt",
+    description: "White cotton T-Shirt",
+    price: 299.99,
   },
 ];
 

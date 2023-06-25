@@ -1,15 +1,16 @@
 .product-item {
-  display: flex;
+  display:flex;
+  
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 
   div {
-    max-width: 400px;
+    // max-width: 400px;
 
     padding: 1rem;
     margin: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #010101;
     border-radius: 4px;
 
     text-align: center;
@@ -23,7 +24,7 @@
 }
 
 .discription {
-  max-width: 400px;
+  // max-width: 400px;
 
   padding: 1rem;
   margin: 1rem;
@@ -45,11 +46,11 @@
   }
 
   img {
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 0.5rem;
+    max-width: 400px; // set max-width for the image
   }
+
 
   p {
     margin-bottom: 0.5rem;

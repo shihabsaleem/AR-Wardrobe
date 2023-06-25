@@ -13,10 +13,7 @@ function ProductDetails() {
     setSelectedSize(e.target.value);
   };
 
-  // const handleTryNow = () => {
-  //   navigate("/pro/watch");
-  //   console.log("Trying product...");
-  // };
+  
 
   const selectedProduct = products.find(
     (product) => product.id === parseInt(current)
