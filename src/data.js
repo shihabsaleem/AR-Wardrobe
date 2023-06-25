@@ -91,7 +91,7 @@ const categories =[
     id:6,
     cat:"shorts"
   }
-]
+];
 // category data end............................................
 
 const products = [

@@ -9,6 +9,8 @@ import UserProf from "./Pages/UserProf";
 import Cart from "./Pages/Cart";
 import SingleCat from "./Pages/SingleCat";
 import Product from "./Pages/Product";
+import Watch from "./Components/WatchS";
+//import Ar from "./Pages/Ar"
 
 
 function App() {
@@ -25,7 +27,12 @@ function App() {
           <Route path="/category" element={<Category />} />
           <Route path="/single" element={<SingleCat />} />
           <Route path="/pro" element={<Product/>} />
+          {/* <Route path="/ar" element={<Ar/>} /> */}
           <Route path="*" element={<NoPage />} />
+          
+
+
+          <Route path="/pro/watch" element={<Watch/>} />
         </Routes>
       </Router>
     </div>

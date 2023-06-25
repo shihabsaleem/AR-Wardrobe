@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AR Face Filter</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="video" width="640" height="480" autoplay></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/face-landmarks-detection"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three"></script>
+    <script>
+      async function start() {
+        const video = document.getElementById('video');
+        await faceapi.nets.tinyFaceDetector.loadFromUri('/models');
+        await faceapi.nets.faceLandmark68Net.loadFromUri('/models');
+        await faceapi.loadFaceDetectionModel('/models');
+
+        if (navigator.mediaDevices.getUserMedia) {
+          navigator.mediaDevices
+            .getUserMedia({ video: true })
+            .then((stream) => (video.srcObject = stream))
+            .catch((error) => console.log('Error accessing webcam:', error));
+        }
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas: canvas });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        const faceFilter = new THREE.Mesh(new THREE.BoxGeometry(1, 1, 1), new THREE.MeshBasicMaterial({ color: 0xff0000, wireframe: true }));
+        scene.add(faceFilter);
+
+        function updateFaceFilter(face) {
+          const { boundingBox: box, yaw, pitch, roll } = face;
+          const center = box.getCenter(new THREE.Vector3());
+          const scale = box.getSize(new THREE.Vector3()).length();
+          const euler = new THREE.Euler(yaw, pitch, roll, 'XYZ');
+
+          faceFilter.position.set(center.x, center.y, -5);
+          faceFilter.scale.set(scale, scale, scale);
+          faceFilter.rotation.setFromEuler(euler);
+        }
+
+        function animate() {
+          requestAnimationFrame(animate);
+          const detections = faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks();
+          if (detections.length > 0) {
+            updateFaceFilter(detections[0]);
+          }
+          renderer.render(scene, camera);
+        }
+
+        animate();
+      }
+
+      start();
+    </script>
+  </body>
+</html>

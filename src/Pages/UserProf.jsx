@@ -15,4 +15,4 @@ const UserProf = ({user}) => {
   )
 }
 
-export default UserProf
+export default UserProf;

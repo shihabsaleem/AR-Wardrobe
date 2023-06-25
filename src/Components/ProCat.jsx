@@ -33,37 +33,39 @@ const settings = {
   ],
 };
 
+
 const Product_category = () => {
   return (
     <div>
       <Slider {...settings}>
         <div className="catpad">
           <BsSunglasses className="catg"/>
-          <div className="c-button" onClick="display-cat()"> <p>Sunglasses </p></div>
+          <div id="c-button" onClick="display-cat('sun')"> <p>Sunglasses </p></div>
         </div>
         <div className="catpad">
           <FaHatCowboy className="catg" />
-          <div className="c-button" onClick="display-cat()"> <p>Hat </p></div>
+          <div id="c-button" onClick="display-cat('hat')"> <p>Hat </p></div>
         </div>
         <div className="catpad">
           <GiHeartNecklace className="catg" />
-          <div className="c-button" onClick="display-cat()"> <p>Chain</p></div>
+          <div id="c-button" onClick="display-cat('chain')"> <p>Chain</p></div>
         </div>
         <div className="catpad">
           <FaTshirt className="catg"/>
-          <div className="c-button" onClick="display-cat()"> <p>T-shirt</p></div>
+          <div id="c-button" onClick="display-cat('shirt')"> <p>T-shirt</p></div>
         </div>
         <div className="catpad">
           <GiTrousers className="catg" />
-          <div className="c-button" onClick="display-cat()"> <p>Pant</p></div>
+          <div id="c-button" onClick="display-cat('pant')"> <p>Pant</p></div>
         </div>
         <div className="catpad">
           <GiShorts className="catg"/>
-          <div className="c-button" onClick="display-cat()"> <p>Shorts</p></div>
+          <div id="c-button" onClick="alert('hello')"> <p>Shorts</p></div>
         </div>
              </Slider>
     </div>
   );
+ 
 };
 
 export default Product_category;

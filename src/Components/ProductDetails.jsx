@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import products from "../data";
 import "../Components/Style/productdetails.scss";
+import { useNavigate } from "react-router-dom";
 
 function ProductDetails() {
   const [selectedSize, setSelectedSize] = useState("S"); // default size
+
+  const navigate = useNavigate();
 
   const handleSizeChange = (e) => {
     setSelectedSize(e.target.value);
   };
 
   const handleTryNow = () => {
-    // handle the "Try Now" button click
+    navigate("/pro/watch");
     console.log("Trying product...");
   };
 
@@ -34,10 +37,10 @@ function ProductDetails() {
             <option value="L">L</option>
             <option value="XL">XL</option>
           </select>
-          <button onClick={handleTryNow}>Try Now</button>
+          {/* <button onClick={handleTryNow}>Try Now</button> */}
+          <button onClick={()=>window.open('./examples/index.html','_blank')}>Try Now</button>
           <button>Add to Cart</button>{" "}
         </div>
-
       </div>
     </div>
   );

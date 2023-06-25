@@ -5,6 +5,7 @@ import {
 import React, { useState, useEffect } from "react";
 import "./Style/slider.scss";
 import { sliderItems } from "../data";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -51,7 +52,7 @@ const Slider = () => {
 
                 <p className="desc">{item.desc} </p>
 
-                <button className="button">SHOP NOW</button>
+                <Link to="ProCat.jsx" className="button">SHOP NOW</Link>
               </div>
             </div>
           ))}
