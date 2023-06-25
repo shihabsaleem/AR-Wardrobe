@@ -9,7 +9,6 @@ import UserProf from "./Pages/UserProf";
 import Cart from "./Pages/Cart";
 import SingleCat from "./Pages/SingleCat";
 import Product from "./Pages/Product";
-import Watch from "./Components/WatchS";
 //import Ar from "./Pages/Ar"
 
 
@@ -32,7 +31,6 @@ function App() {
           
 
 
-          <Route path="/pro/watch" element={<Watch/>} />
         </Routes>
       </Router>
     </div>
