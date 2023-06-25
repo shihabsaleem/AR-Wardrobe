@@ -2,9 +2,13 @@ import React from "react";
 import "./Style/categories.scss";
 
 const ItemCat = ({ item }) => {
+  const handleClick = ()=>{
+    localStorage.setItem('id',item.id);
+    window.location.href = '/pro';
+  }
   return (
     <div className="product-container">
-      <div className="product-card">
+      <div className="product-card" onClick={handleClick}>
         <img src={item.image} alt={item.title} className="card-img" />
         <div className="product-det">
           <h2>{item.title}</h2>
