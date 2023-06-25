@@ -35,7 +35,7 @@
       video = createCapture(constraints);
       video.hide();
       createCanvas(1280, 720, WEBGL);
-      myPoseNet = ml5.poseNet(video, "multiple", modelReady);
+      myPoseNet = ml5.poseNet(video, modelReady);
       noStroke();
     }
 
@@ -49,15 +49,13 @@
     }
 
     function drawBodyMode(pose) {
-      if (pose.shirt) drawShirt(pose.shirt, pose.scale);
+      if (pose.shirt) drawShirt(pose.shirt.position, pose.scale);
     }
 
     function drawShirt(position, myScale) {
-      push();
       translate(position.x - width / 2, position.y - height / 2 + 100);
       scale(-myScale * 8); // Invert the scaling
       model(shirt);
-      pop();
     }
 
     function modelReady() {
@@ -105,11 +103,13 @@
               poseResult.pose.rightShoulder
             ) {
               myPose.shirt = {
-                x:
-                  (poseResult.pose.leftShoulder.x +
-                    poseResult.pose.rightShoulder.x) /
-                  2,
-                y: poseResult.pose.leftShoulder.y,
+                position: {
+                  x:
+                    (poseResult.pose.leftShoulder.x +
+                      poseResult.pose.rightShoulder.x) /
+                    2,
+                  y: poseResult.pose.leftShoulder.y,
+                }
               };
             }
             if (poseResult.pose && poseResult.pose.rightElbow) {

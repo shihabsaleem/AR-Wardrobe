@@ -5,7 +5,8 @@ import sl4 from "./Assets/sunglass.jpg";
 import sl5 from "./Assets/specs.jpg";
 import sl6 from "./Assets/nosering.webp";
 import sl7 from "./Assets/earings.jpg";
-import sl8 from "./Assets/tshirt.avif";
+import sl8 from "./Assets/white-t-shirts.jpg";
+import sl9 from "./Assets/shorts.jpg";
 export const sliderItems = [
   {
     id: 1,
@@ -43,7 +44,7 @@ export const item = [
     image: sl4,
     title: "Sunglass",
     description: "solic black sunglass",
-    price: 399.99,
+    price: 199.99,
   },
   {
     id: 3,
@@ -66,6 +67,13 @@ export const item = [
     description: "White cotton T-Shirt",
     price: 299.99,
   },
+  {
+    id: 6,
+    image: sl9,
+    title: "Shorts",
+    description: "Pure cotton shorts",
+    price: 199.99,
+  }
 ];
 
 
@@ -78,7 +86,7 @@ const categories =[
   },
   {
     id:2,
-    cat:"hat"
+    cat:"Earrings"
   },
   {
     id:3,
@@ -101,23 +109,25 @@ const categories =[
 
 export const products = [
   {
+
     cat:1,
     id: 1,
-    name: "Product A",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    longdesc:
-      "Integer massa arcu, scelerisque eget ex et, tincidunt hendrerit nunc. Morbi quam orci, ornare eget pretium nec, blandit ac erat. Maecenas mattis volutpat nunc et condimentum. Fusce porttitor, leo in ornare facilisis, justo leo maximus lectus, id volutpat orci purus quis orci. Nulla sed urna nec risus pretium feugiat sed ut magna. Donec sollicitudin convallis lorem non egestas. Nulla non consectetur ex, eget placerat sapien. Fusce porttitor libero eu eros dictum tristique. Sed bibendum sed ligula sit amet aliquam. Proin sodales eros sed lacus elementum, at maximus magna imperdiet. Nullam imperdiet in libero eu luctus. Donec consectetur dolor quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent interdum, mauris eu porta auctor, augue sem mattis ipsum, non porttitor orci purus et nisl. Nam ante ipsum, tincidunt sed ligula non, vulputate hendrerit ligula.",
-    price: 19.99,
-    image: sl1,
-  },{
+    name: "Sunglass",
+    description: "solic black sunglass",
+    // longdesc:
+    //   "Integer massa arcu, scelerisque eget ex et, tincidunt hendrerit nunc. Morbi quam orci, ornare eget pretium nec, blandit ac erat. Maecenas mattis volutpat nunc et condimentum. Fusce porttitor, leo in ornare facilisis, justo leo maximus lectus, id volutpat orci purus quis orci. Nulla sed urna nec risus pretium feugiat sed ut magna. Donec sollicitudin convallis lorem non egestas. Nulla non consectetur ex, eget placerat sapien. Fusce porttitor libero eu eros dictum tristique. Sed bibendum sed ligula sit amet aliquam. Proin sodales eros sed lacus elementum, at maximus magna imperdiet. Nullam imperdiet in libero eu luctus. Donec consectetur dolor quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent interdum, mauris eu porta auctor, augue sem mattis ipsum, non porttitor orci purus et nisl. Nam ante ipsum, tincidunt sed ligula non, vulputate hendrerit ligula.",
+     price: 199.99,
+    image: sl4,
+  },
+  {
     cat:1,
-    id: 1,
-    name: "Product A",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    longdesc:
-      "Integer massa arcu, scelerisque eget ex et, tincidunt hendrerit nunc. Morbi quam orci, ornare eget pretium nec, blandit ac erat. Maecenas mattis volutpat nunc et condimentum. Fusce porttitor, leo in ornare facilisis, justo leo maximus lectus, id volutpat orci purus quis orci. Nulla sed urna nec risus pretium feugiat sed ut magna. Donec sollicitudin convallis lorem non egestas. Nulla non consectetur ex, eget placerat sapien. Fusce porttitor libero eu eros dictum tristique. Sed bibendum sed ligula sit amet aliquam. Proin sodales eros sed lacus elementum, at maximus magna imperdiet. Nullam imperdiet in libero eu luctus. Donec consectetur dolor quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent interdum, mauris eu porta auctor, augue sem mattis ipsum, non porttitor orci purus et nisl. Nam ante ipsum, tincidunt sed ligula non, vulputate hendrerit ligula.",
-    price: 19.99,
-    image: sl1,
+    id: 2,
+    name: "Sunglass",
+    description: "solic black sunglass",
+    // longdesc:
+    //   "Integer massa arcu, scelerisque eget ex et, tincidunt hendrerit nunc. Morbi quam orci, ornare eget pretium nec, blandit ac erat. Maecenas mattis volutpat nunc et condimentum. Fusce porttitor, leo in ornare facilisis, justo leo maximus lectus, id volutpat orci purus quis orci. Nulla sed urna nec risus pretium feugiat sed ut magna. Donec sollicitudin convallis lorem non egestas. Nulla non consectetur ex, eget placerat sapien. Fusce porttitor libero eu eros dictum tristique. Sed bibendum sed ligula sit amet aliquam. Proin sodales eros sed lacus elementum, at maximus magna imperdiet. Nullam imperdiet in libero eu luctus. Donec consectetur dolor quam. Interdum et malesuada fames ac ante ipsum primis in faucibus. Praesent interdum, mauris eu porta auctor, augue sem mattis ipsum, non porttitor orci purus et nisl. Nam ante ipsum, tincidunt sed ligula non, vulputate hendrerit ligula.",
+     price: 199.99,
+    image: sl4,
   },
   {
     cat:2,
@@ -138,19 +148,19 @@ export const products = [
       "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     longdesc:
       "Phasellus ut malesuada tortor, sit amet maximus est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas dui nisi, tristique quis lacinia eu, suscipit id quam. Vestibulum nisi ipsum, dignissim at ullamcorper a, hendrerit nec turpis. Quisque egestas nisi vulputate odio porta fringilla. Fusce in enim erat. Pellentesque sed quam tincidunt, tincidunt dui sed, venenatis mi. Etiam odio risus, viverra vitae odio eget, tincidunt porta augue. Fusce nec auctor urna, ut pretium nibh. Sed elementum, metus id sodales congue, metus est auctor nisl, nec pretium purus risus id nisi. Vestibulum ultricies sem non mi interdum, id fringilla justo pretium. Duis volutpat cursus nisi, id bibendum mi rutrum a. Sed tempus tellus ac erat tincidunt, in rutrum sapien molestie. Curabitur rhoncus tellus vel risus vestibulum imperdiet. Nam a lobortis lectus.",
-    price: 39.99,
-    image: sl2,
+    price: 299.99,
+    image: sl8,
   },
   {
     cat:4,
     id: 3,
-    name: "Product C",
+    name: "T-shirt",
     description:
-      "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    longdesc:
-      "Phasellus ut malesuada tortor, sit amet maximus est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas dui nisi, tristique quis lacinia eu, suscipit id quam. Vestibulum nisi ipsum, dignissim at ullamcorper a, hendrerit nec turpis. Quisque egestas nisi vulputate odio porta fringilla. Fusce in enim erat. Pellentesque sed quam tincidunt, tincidunt dui sed, venenatis mi. Etiam odio risus, viverra vitae odio eget, tincidunt porta augue. Fusce nec auctor urna, ut pretium nibh. Sed elementum, metus id sodales congue, metus est auctor nisl, nec pretium purus risus id nisi. Vestibulum ultricies sem non mi interdum, id fringilla justo pretium. Duis volutpat cursus nisi, id bibendum mi rutrum a. Sed tempus tellus ac erat tincidunt, in rutrum sapien molestie. Curabitur rhoncus tellus vel risus vestibulum imperdiet. Nam a lobortis lectus.",
-    price: 39.99,
-    image: sl2,
+      "White cotton T-Shirt",
+    // longdesc:
+    //   "Phasellus ut malesuada tortor, sit amet maximus est. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas dui nisi, tristique quis lacinia eu, suscipit id quam. Vestibulum nisi ipsum, dignissim at ullamcorper a, hendrerit nec turpis. Quisque egestas nisi vulputate odio porta fringilla. Fusce in enim erat. Pellentesque sed quam tincidunt, tincidunt dui sed, venenatis mi. Etiam odio risus, viverra vitae odio eget, tincidunt porta augue. Fusce nec auctor urna, ut pretium nibh. Sed elementum, metus id sodales congue, metus est auctor nisl, nec pretium purus risus id nisi. Vestibulum ultricies sem non mi interdum, id fringilla justo pretium. Duis volutpat cursus nisi, id bibendum mi rutrum a. Sed tempus tellus ac erat tincidunt, in rutrum sapien molestie. Curabitur rhoncus tellus vel risus vestibulum imperdiet. Nam a lobortis lectus.",
+    price: 299.99,
+    image: sl8,
   },
   // more products...
 ];

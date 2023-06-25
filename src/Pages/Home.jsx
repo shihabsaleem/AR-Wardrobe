@@ -6,12 +6,13 @@ import Slider from "../Components/Slider";
 import Categories from "../Components/Categories";
 import Footer from "../Components/Footer";
 import ProCat from "../Components/ProCat";
-
+import { useState } from "react";
 const Home = () => {
+  const [user, setUser] = useState("")
   return (
     <div className="home">
       <Announce />
-      <Navbar />
+      <Navbar user={user} setUser={setUser}/>
       <Slider />
       <ProCat/>
       <Categories />

@@ -4,8 +4,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BsSunglasses } from "react-icons/bs";
 
-import { FaHatCowboy,FaTshirt } from "react-icons/fa";
-import {GiHeartNecklace,GiTrousers,GiShorts } from "react-icons/gi";
+import { FaTshirt } from "react-icons/fa";
+import {GiSpectacles,GiTrousers,GiShorts,GiEarrings } from "react-icons/gi";
 import "../Components/Style/procat.scss";
 const settings = {
   dots: false,
@@ -43,12 +43,12 @@ const Product_category = () => {
           <div id="c-button" onClick={()=>{localStorage.setItem('category',1);window.location.href='/single'}}> <p>Sunglasses </p></div>
         </div>
         <div className="catpad">
-          <FaHatCowboy className="catg" />
-          <div id="c-button" onClick={()=>{localStorage.setItem('category',2);window.location.href='/single'}}> <p>Hat </p></div>
+          <GiEarrings className="catg" />
+          <div id="c-button" onClick={()=>{localStorage.setItem('category',2);window.location.href='/single'}}> <p> Earrings</p></div>
         </div>
         <div className="catpad">
-          <GiHeartNecklace className="catg" />
-          <div id="c-button" onClick={()=>{localStorage.setItem('category',3);window.location.href='/single'}}> <p>Chain</p></div>
+          <GiSpectacles className="catg" />
+          <div id="c-button" onClick={()=>{localStorage.setItem('category',3);window.location.href='/single'}}> <p>Specs</p></div>
         </div>
         <div className="catpad">
           <FaTshirt className="catg"/>
