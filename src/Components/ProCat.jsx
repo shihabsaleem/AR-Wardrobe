@@ -40,27 +40,27 @@ const Product_category = () => {
       <Slider {...settings}>
         <div className="catpad">
           <BsSunglasses className="catg"/>
-          <div id="c-button" onClick="display-cat('sun')"> <p>Sunglasses </p></div>
+          <div id="c-button" onClick={()=>{localStorage.setItem('category',1);window.location.href='/single'}}> <p>Sunglasses </p></div>
         </div>
         <div className="catpad">
           <FaHatCowboy className="catg" />
-          <div id="c-button" onClick="display-cat('hat')"> <p>Hat </p></div>
+          <div id="c-button" onClick={()=>{localStorage.setItem('category',2);window.location.href='/single'}}> <p>Hat </p></div>
         </div>
         <div className="catpad">
           <GiHeartNecklace className="catg" />
-          <div id="c-button" onClick="display-cat('chain')"> <p>Chain</p></div>
+          <div id="c-button" onClick={()=>{localStorage.setItem('category',3);window.location.href='/single'}}> <p>Chain</p></div>
         </div>
         <div className="catpad">
           <FaTshirt className="catg"/>
-          <div id="c-button" onClick="display-cat('shirt')"> <p>T-shirt</p></div>
+          <div id="c-button" onClick={()=>{localStorage.setItem('category',4);window.location.href='/single'}}> <p>T-shirt</p></div>
         </div>
         <div className="catpad">
           <GiTrousers className="catg" />
-          <div id="c-button" onClick="display-cat('pant')"> <p>Pant</p></div>
+          <div id="c-button" onClick={()=>{localStorage.setItem('category',5);window.location.href='/single'}}> <p>Pant</p></div>
         </div>
         <div className="catpad">
           <GiShorts className="catg"/>
-          <div id="c-button" onClick="alert('hello')"> <p>Shorts</p></div>
+          <div id="c-button" onClick={()=>{localStorage.setItem('category',6);window.location.href='/single'}}> <p>Shorts</p></div>
         </div>
              </Slider>
     </div>

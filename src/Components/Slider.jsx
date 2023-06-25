@@ -52,7 +52,7 @@ const Slider = () => {
 
                 <p className="desc">{item.desc} </p>
 
-                <Link to="ProCat.jsx" className="button">SHOP NOW</Link>
+                <Link to="/" className="buttonc">SHOP NOW</Link>
               </div>
             </div>
           ))}
