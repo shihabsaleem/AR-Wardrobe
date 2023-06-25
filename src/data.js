@@ -1,6 +1,8 @@
 import sl1 from "./Assets/img0.png";
 import sl2 from "./Assets/img1.png";
 import sl3 from "./Assets/img2.png";
+import sl4 from "./Assets/sunglass.jpg";
+import sl5 from "./Assets/specs.jpg"
 export const sliderItems = [
   {
     id: 1,
@@ -28,17 +30,17 @@ export const sliderItems = [
 export const item = [
   {
     id: 1,
-    image: sl1,
-    title: "Product Title",
-    description: "Product Description",
-    price: 19.49,
+    image: sl4,
+    title: "Sunglass",
+    description: "black sunglass",
+    price: 330.49,
   },
   {
     id: 2,
-    image: sl2,
-    title: "Product Title",
-    description: "Product Description",
-    price: 17.99,
+    image: sl5,
+    title: "Specs",
+    description: "solic black frame",
+    price: 400.99,
   },
   {
     id: 3,
