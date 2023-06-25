@@ -18,7 +18,10 @@ function ProductDetails() {
   const selectedProduct = products.find(
     (product) => product.id === parseInt(current)
   ); // select product with ID of 1
-
+  const handleCart = ()=>{
+    localStorage.setItem('idsel',selectedProduct.id)
+    window.location.href = '/cart'
+  }
   const handleTryNow = () => {
     switch (current) {
       case "1":
@@ -61,7 +64,7 @@ function ProductDetails() {
             <option value="XL">XL</option>
           </select>
           <button onClick={handleTryNow}>Try Now</button>
-          <button>Add to Cart</button>{" "}
+          <button onClick={handleCart}>Add to Cart</button>{" "}
         </div>
       </div>
     </div>
