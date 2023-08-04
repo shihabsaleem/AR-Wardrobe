@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { item } from "../data";
 import "../Components/Style/productdetails.scss";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 function ProductDetails() {
   const [selectedSize, setSelectedSize] = useState("S"); // default size
   const current = localStorage.getItem("id");
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const products = item;
 
   const handleSizeChange = (e) => {

@@ -1,11 +1,28 @@
 .announcement-container {
     height: 30px;
-    background-color: teal;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--container-color);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
 
+@media screen and (max-width: 576px) {
+    .announcement-container {
+        font-size: var(--smaller-font-size);
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 991px) {
+    .announcement-container {
+        font-size: var(--normal-font-size);
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .announcement-container {
+        font-size: var(--normal-font-size);
+    }
 }

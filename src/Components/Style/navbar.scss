@@ -1,114 +1,134 @@
+$mb_0_25: 0.25rem;
+$mb_0_5: 0.5rem;
+$mb_0_75: 0.75rem;
+$mb_1: 1rem;
+$mb_1_5: 1.5rem;
+$mb_2: 2rem;
+$mb_2_25: 2.25rem;
+$mb_3: 3rem;
+
+$primary-color: teal;
+$text-color: gray;
+$hover-color: teal;
+$font-normal: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+$small-font-size: 0.875rem;
+
 .navbar-Container {
-    height: 60px;
-  }
-  
-  .navbar-Wrapper {
-    padding: 10px 20px;
+  height: 60px;
+}
+
+.navbar-Wrapper {
+  padding: $mb_0_5 $mb_1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .navbar-Left {
+    flex: 1;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-  
-    .navbar-Left {
-      flex: 1;
-      display: flex;
-      align-items: center;
-  
-      .lang {
-        font-size: 14px;
-        cursor: pointer;
-      }
-  
-      .searchNav {
-        border: 0.5px solid lightgray;
-        display: flex;
-        align-items: center;
-        margin-left: 25px;
-        padding: 5px;
-  
-        .navbar-txt {
-          border: none;
-        }
-  
-        .input {
-          color: gray;
-          font-size: 14px;
-        }
-      }
-    }
-  
-    .navbar-Center {
-      flex: 1;
-      text-align: center;
-  
-      .navbar-logo {
-        font-weight: bold;
-  
-        .logo {
-          height: 30px;
-        }
-      }
-    }
-  
-    .navbar-Right {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-  
-      .navbar-menu {
-        font-size: 14px !important;
-        cursor: pointer;
-        margin-left: 25px;
-        text-decoration: none;
-        color: gray;
-        text-transform: uppercase;
-        font-weight: 400;
-        transition: cubic-bezier(0.755, 0.05, 0.855, 0.06);
-  
-        &:hover {
-          color: teal;
-          transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-      }
-    }
-  
-    // Media queries for responsive design
-    @media screen and (max-width: 768px) {
-      .navbar-Left {
-        .lang {
-          display: none;
-        }
-  
-        .searchNav {
-          margin-left: 10px;
-        }
-      }
-  
-      .navbar-Right {
-        .navbar-menu {
-          margin-left: 10px;
-        }
-      }
-    }
-  
-    @media screen and (max-width: 480px) {
-      .navbar-Wrapper {
-        flex-direction: column;
-      }
-  
-      .navbar-Left {
-       // margin-bottom: 10px;
-        display: none;
-  
-        .searchNav {
-          margin-left: 0;
-        }
-      }
-  
-      .navbar-Right {
-        justify-content: center;
-        margin-top: 10px;
+
+    .navbar-menu {
+      font-size: $small-font-size;
+      cursor: pointer;
+      text-decoration: none;
+      color: $text-color;
+      text-transform: uppercase;
+      font-weight: $font-normal;
+      padding: $mb_0_25 $mb_0_5;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
       }
     }
   }
-  
+
+  .navbar-Center {
+    flex: 1;
+    text-align: center;
+
+    .navbar-logo {
+      font-weight: $font-semi-bold;
+
+      .logo {
+        height: 30px;
+      }
+    }
+  }
+
+  .navbar-Right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .navbar-menu {
+      font-size: $small-font-size;
+      cursor: pointer;
+      text-decoration: none;
+      color: $text-color;
+      text-transform: uppercase;
+      font-weight: $font-normal;
+      padding: $mb_0_25 $mb_0_5;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+
+    .navbar-badge {
+      display: flex;
+      align-items: center;
+      margin-left: $mb_0_75;
+
+      .navbar-icon {
+        font-size: 24px;
+        color: $text-color;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $hover-color;
+        }
+      }
+
+      .MuiBadge-badge {
+        right: -8px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .navbar-Left,
+    .navbar-Right {
+      justify-content: flex-end;
+
+      .navbar-menu {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .navbar-Wrapper {
+      flex-direction: column;
+    }
+
+    .navbar-Left {
+      display: none;
+    }
+
+    .navbar-Right {
+      justify-content: center;
+      margin-top: $mb_0_5;
+
+      .navbar-menu {
+        margin: 5px;
+        font-size: $small-font-size;
+      }
+    }
+  }
+}

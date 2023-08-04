@@ -27,7 +27,8 @@
     "sass": "^1.58.3",
     "slick-carousel": "^1.8.1",
     "three": "^0.151.3",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "workbox-background-sync": "^7.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

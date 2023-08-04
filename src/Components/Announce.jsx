@@ -3,7 +3,7 @@ import "./Style/announce.scss";
 
 const Announce = () => {
   return (
-    <div className="announcement-container">Let's Have Hybrid Shopping Experience....</div>
+    <div className="announcement-container">Let's Experience Shopping....</div>
   );
 };
 

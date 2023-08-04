@@ -1,20 +1,21 @@
-import React from "react";
-import "./../Components/Style/home.scss";
+import React, { useState } from "react";
+import "../Components/Style/home.scss"; 
+
 import Navbar from "../Components/Navbar";
 import Announce from "../Components/Announce";
 import Slider from "../Components/Slider";
 import Categories from "../Components/Categories";
 import Footer from "../Components/Footer";
 import ProCat from "../Components/ProCat";
-import { useState } from "react";
+
 const Home = () => {
-  const [user, setUser] = useState("")
+  const [user, setUser] = useState("");
   return (
     <div className="home">
       <Announce />
-      <Navbar user={user} setUser={setUser}/>
+      <Navbar user={user} setUser={setUser} />
       <Slider />
-      <ProCat/>
+      <ProCat />
       <Categories />
       <Footer />
     </div>

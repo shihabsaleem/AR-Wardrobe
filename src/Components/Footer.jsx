@@ -9,13 +9,13 @@ function Footer() {
           <h3>Shop</h3>
           <ul>
             <li>
-              <a href="#">Men's</a>
+              <a href="/shop/mens">Men's</a>
             </li>
             <li>
-              <a href="#">Women's</a>
+              <a href="/shop/womens">Women's</a>
             </li>
             <li>
-              <a href="#">Kids</a>
+              <a href="/shop/kids">Kids</a>
             </li>
           </ul>
         </div>
@@ -23,13 +23,13 @@ function Footer() {
           <h3>About Us</h3>
           <ul>
             <li>
-              <a href="#">Our Story</a>
+              <a href="/about/our-story">Our Story</a>
             </li>
             <li>
-              <a href="#">Blog</a>
+              <a href="/about/blog">Blog</a>
             </li>
             <li>
-              <a href="#">Contact Us</a>
+              <a href="/about/contact">Contact Us</a>
             </li>
           </ul>
         </div>
@@ -37,13 +37,13 @@ function Footer() {
           <h3>Support</h3>
           <ul>
             <li>
-              <a href="#">FAQs</a>
+              <a href="/support/faqs">FAQs</a>
             </li>
             <li>
-              <a href="#">Shipping</a>
+              <a href="/support/shipping">Shipping</a>
             </li>
             <li>
-              <a href="#">Returns</a>
+              <a href="/support/returns">Returns</a>
             </li>
           </ul>
         </div>
@@ -51,17 +51,17 @@ function Footer() {
           <h3>Follow Us</h3>
           <ul className="social-links">
             <li>
-              <a href="#">
+              <a href="https://www.facebook.com">
                 <i className="fab fa-facebook-f"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.twitter.com">
                 <i className="fab fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="https://www.instagram.com">
                 <i className="fab fa-instagram"></i>
               </a>
             </li>
