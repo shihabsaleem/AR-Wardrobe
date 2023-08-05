@@ -1,37 +1,39 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home";
-import Login from "./Pages/Login";
-import NoPage from "./Pages/NoPage";
-import Register from "./Pages/Register";
-import Category from "./Pages/SingleCat";
-import UserProf from "./Pages/UserProf";
-import Cart from "./Pages/Cart";
-import SingleCat from "./Pages/SingleCat";
-import Product from "./Pages/Product";
-//import Ar from "./Pages/Ar"
-
+import HomePage from "./pages/HomePage";
+import LoginPage from "./pages/LoginPage";
+import RegisterPage from "./pages/RegisterPage";
+import CategoryPage from "./pages/CategoryPage";
+import ProductPage from "./pages/ProductPage";
+import CartPage from "./pages/CartPage";
+import UserProfilePage from "./pages/UserProfilePage";
+import NotFoundPage from "./pages/NotFoundPage";
+import ARView from "./components/features/AR/ARView";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<NoPage />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/profile" element={<UserProf />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/category" element={<Category />} />
-          <Route path="/single" element={<SingleCat />} />
-          <Route path="/pro" element={<Product/>} />
-          {/* <Route path="/ar" element={<Ar/>} /> */}
-      
-          <Route path="*" element={<NoPage />} />
-          
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/profile" element={<UserProfilePage />} />
+          <Route path="/cart" element={<CartPage />} />
 
+          {/* Note: In old app, /category -> SingleCat (list of products in category?) 
+              and /single -> SingleCat (same component?)
+              Checking old App.js: 
+              <Route path="/category" element={<Category />} />  (Category was SingleCat)
+              <Route path="/single" element={<SingleCat />} />
+              So both pointed to SingleCat. I will point both to CategoryPage.
+          */}
+          <Route path="/category" element={<CategoryPage />} />
+          <Route path="/single" element={<CategoryPage />} />
 
+          <Route path="/pro" element={<ProductPage />} />
+          <Route path="/try-on" element={<ARView />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Router>
     </div>
