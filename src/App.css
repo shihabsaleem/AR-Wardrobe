@@ -4,8 +4,8 @@
   --text-color: #333;
   --body-color: #f5f5f5;
   --container-color: #fff;
-  --combo-yellow: #ffdc5d;
-  --combo-yellow-secondary: #ffdc5d;
+  --combo-yellow: #88cc88; /* Changed to a shade of green */
+  --combo-yellow-secondary: #66cc66;
   --body-font: "Montserrat", sans-serif;
   --big-font-size: 3.5rem;
   --h1-font-size: 2.25rem;
