@@ -1,5 +1,5 @@
 $grid-gap: 10px;
-$card-width: 400px;
+$card-width: 300px;
 
 .cards {
     display: grid;
@@ -7,126 +7,98 @@ $card-width: 400px;
     grid-gap: #{$grid-gap};
     z-index: 5;
     padding: 15px;
-    left: 0;
-    right:0;
+    margin: 0 auto;
     object-fit: cover;
-}
 
-.product-container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    padding: 0 10px;
-    flex-wrap: wrap;
-    //max-height: 400px;
-    overflow: auto;
-
-    .product-card {
+    .product-container {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 600px;
-        padding: 16px;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        position: relative;
-        overflow: hidden;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 10px;
 
-        &:hover {
-            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-            transform: translateY(-6px);
-            cursor: pointer;
-
-            .card-img {
-                width: 0;
-                height: 0%;
-
-            }
-        }
-
-        .product-det {
+        .product-card {
+            display: flex;
             flex-direction: column;
-        }
-
-        img {
+            align-items: center;
             width: 100%;
-            height: auto;
-            // margin-bottom: 16px;
+            max-width: 250px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0 5px 20px;
             transition: transform 0.3s ease;
-            max-height: 250px;
 
-            &:hover {
-                transform: scale(1.1);
+            img {
+                width: 100%;
+                max-height: 200px;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+                mix-blend-mode: multiply;
+                /* Apply the blend mode */
+
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
-        }
 
-        h2 {
-            font-size: 1.4rem;
-            margin-bottom: 8px;
-            color: #333;
-            text-transform: uppercase;
-        }
-
-        p {
-            font-size: 1rem;
-            margin-bottom: 16px;
-            color: #555;
-        }
-
-        span {
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 16px;
-            color: #008080;
-        }
-
-        button {
-
-            background-color: #008080;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            padding: 12px 24px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: #008080;
+            h2 {
+                font-size: 1.2rem;
+                margin: 8px 0;
+                color: #333;
+                text-transform: uppercase;
             }
-        }
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
+            p {
+                font-size: 1rem;
+                margin: 8px 0;
+                color: #555;
+            }
 
-        &:hover::before {
-            opacity: 1;
+            span {
+                font-size: 1rem;
+                font-weight: bold;
+                margin: 8px;
+                color: #008080;
+            }
+
+            button {
+                border: 1px solid #008080;
+                color: #008080;
+                border-radius: 0.25rem;
+                padding: 4px 8px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+
+                &:hover {
+                    background-color: #008080;
+                    color: #fff;
+                }
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 0.5s ease;
+            }
+
+            &:hover::before {
+                opacity: 0.2;
+            }
         }
     }
 }
 
-
-
-
-@media(max-width:456px) {
-    .product-container {
-        .product-card {
-            img {
-                width: 100%;
-                height: auto;
-
-                transition: transform 0.3s ease;
-                max-height: 200px;
-            }
-        }
+@media (max-width: 768px) {
+    .cards {
+        padding: 10px;
     }
 }

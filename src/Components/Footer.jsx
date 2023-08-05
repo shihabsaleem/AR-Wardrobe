@@ -1,5 +1,6 @@
 import React from "react";
 import "./Style/footer.scss";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -52,17 +53,17 @@ function Footer() {
           <ul className="social-links">
             <li>
               <a href="https://www.facebook.com">
-                <i className="fab fa-facebook-f"></i>
+                <FaFacebookF />
               </a>
             </li>
             <li>
               <a href="https://www.twitter.com">
-                <i className="fab fa-twitter"></i>
+                <FaTwitter />
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com">
-                <i className="fab fa-instagram"></i>
+                <FaInstagram />
               </a>
             </li>
           </ul>
