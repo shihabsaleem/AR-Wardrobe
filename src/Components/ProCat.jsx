@@ -9,7 +9,7 @@ import { GiSpectacles, GiTrousers, GiShorts, GiEarrings } from "react-icons/gi";
 import "../Components/Style/procat.scss";
 
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   speed: 500,
   slidesToShow: 5,
@@ -28,7 +28,7 @@ const settings = {
     {
       breakpoint: 576,
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
       },
     },
   ],
