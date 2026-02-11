@@ -1,13 +1,9 @@
 import React, { useState } from "react";
-import { item } from "../../../data";
+
 import { FaTrash, FaPlus, FaMinus } from "react-icons/fa";
 
 const CartItem = () => {
   const [items, setItems] = useState([]);
-
-  const addItem = (product, quantity) => {
-    setItems([...items, { ...product, quantity }]);
-  };
 
   const removeItem = (index) => {
     const newItems = [...items];
@@ -21,7 +17,7 @@ const CartItem = () => {
     setItems(newItems);
   };
 
-  let products = item;
+
 
   const calculateTotal = () => {
     let total = 0;
@@ -31,9 +27,7 @@ const CartItem = () => {
     return total;
   };
 
-  const product = products.find(
-    (product) => product.id === parseInt(localStorage.getItem('idsel'))
-  );
+
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white py-12">

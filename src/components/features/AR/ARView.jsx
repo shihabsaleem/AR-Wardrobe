@@ -187,7 +187,6 @@ const ARView = () => {
                     const landmarks = detections[0].landmarks;
                     const leftEye = landmarks.getLeftEye();
                     const rightEye = landmarks.getRightEye();
-                    const nose = landmarks.getNose();
 
                     // Get the center point between the eyes (where glasses sit)
                     const leftEyeCenter = {
@@ -237,18 +236,20 @@ const ARView = () => {
             detectAndRender();
         };
 
+
         runAR();
 
-        if (videoRef.current) {
-            videoRef.current.addEventListener('play', handleVideoPlay);
+        const videoElement = videoRef.current;
+        if (videoElement) {
+            videoElement.addEventListener('play', handleVideoPlay);
         }
 
         return () => {
             if (animationFrameId) {
                 cancelAnimationFrame(animationFrameId);
             }
-            if (videoRef.current && videoRef.current.srcObject) {
-                const tracks = videoRef.current.srcObject.getTracks();
+            if (videoElement && videoElement.srcObject) {
+                const tracks = videoElement.srcObject.getTracks();
                 tracks.forEach(track => track.stop());
             }
             if (renderer) {

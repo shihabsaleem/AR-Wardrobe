@@ -54,18 +54,16 @@ const HomePage = () => {
             </div>
 
             {/* Trending Section */}
-            <div className="py-20 bg-gradient-to-b from-white to-gray-50">
-                <div className="container mx-auto max-w-7xl px-6">
-                    <div className="text-center mb-12">
-                        <h2 className="text-5xl font-black text-gray-900 mb-4">
-                            Trending Now
-                        </h2>
-                        <p className="text-xl text-gray-600">
-                            Discover the hottest products everyone's talking about
-                        </p>
-                    </div>
-                    <PendingSlider />
+            <div className="py-20 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+                <div className="text-center mb-12 container mx-auto max-w-7xl px-6">
+                    <h2 className="text-5xl font-black text-gray-900 mb-4">
+                        Trending Now
+                    </h2>
+                    <p className="text-xl text-gray-600">
+                        Discover the hottest products everyone's talking about
+                    </p>
                 </div>
+                <PendingSlider />
             </div>
 
             {/* Categories Section */}
@@ -80,6 +78,110 @@ const HomePage = () => {
                         </p>
                     </div>
                     <CategoryGrid />
+                </div>
+            </div>
+
+            {/* Testimonials Section */}
+            <div className="py-20 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+                {/* Decorative elements */}
+                <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-light/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+                <div className="container mx-auto max-w-7xl px-6 relative z-10">
+                    <div className="text-center mb-12">
+                        <div className="inline-block px-5 py-2.5 bg-white/40 backdrop-blur-2xl rounded-full border border-white/60 text-sm font-bold text-primary mb-6 shadow-xl">
+                            ⭐ Customer Reviews
+                        </div>
+                        <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4">
+                            What Our{" "}
+                            <span className="bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent">
+                                Customers Say
+                            </span>
+                        </h2>
+                        <p className="text-lg md:text-xl text-gray-600">
+                            Join thousands of happy shoppers who love our AR experience
+                        </p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        {/* Testimonial 1 */}
+                        <div className="relative bg-white/40 backdrop-blur-2xl border border-white/60 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 hover:bg-white/60 transition-all duration-300 group overflow-hidden">
+                            {/* Gradient overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                            <div className="relative z-10">
+                                <div className="flex items-center gap-1 mb-4">
+                                    {[...Array(5)].map((_, i) => (
+                                        <span key={i} className="text-yellow-400 text-lg drop-shadow-md">★</span>
+                                    ))}
+                                </div>
+                                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
+                                    "The AR try-on feature is absolutely amazing! I could see exactly how the sunglasses looked on me before buying. Game changer!"
+                                </p>
+                                <div className="flex items-center gap-4">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                        S
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900">Sarah Johnson</h4>
+                                        <p className="text-sm text-gray-500">Verified Buyer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Testimonial 2 */}
+                        <div className="relative bg-white/40 backdrop-blur-2xl border border-white/60 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 hover:bg-white/60 transition-all duration-300 group overflow-hidden">
+                            {/* Gradient overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                            <div className="relative z-10">
+                                <div className="flex items-center gap-1 mb-4">
+                                    {[...Array(5)].map((_, i) => (
+                                        <span key={i} className="text-yellow-400 text-lg drop-shadow-md">★</span>
+                                    ))}
+                                </div>
+                                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
+                                    "Fast shipping, great quality products, and the virtual try-on saved me from making a wrong purchase. Highly recommend!"
+                                </p>
+                                <div className="flex items-center gap-4">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                        M
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900">Michael Chen</h4>
+                                        <p className="text-sm text-gray-500">Verified Buyer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Testimonial 3 */}
+                        <div className="relative bg-white/40 backdrop-blur-2xl border border-white/60 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 hover:bg-white/60 transition-all duration-300 group overflow-hidden">
+                            {/* Gradient overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                            <div className="relative z-10">
+                                <div className="flex items-center gap-1 mb-4">
+                                    {[...Array(5)].map((_, i) => (
+                                        <span key={i} className="text-yellow-400 text-lg drop-shadow-md">★</span>
+                                    ))}
+                                </div>
+                                <p className="text-gray-700 mb-6 leading-relaxed font-medium">
+                                    "Love the modern interface and the AR technology is so smooth! Shopping for accessories has never been this fun and easy."
+                                </p>
+                                <div className="flex items-center gap-4">
+                                    <div className="w-14 h-14 bg-gradient-to-br from-primary to-primary-dark rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">
+                                        E
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold text-gray-900">Emily Rodriguez</h4>
+                                        <p className="text-sm text-gray-500">Verified Buyer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

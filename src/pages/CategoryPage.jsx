@@ -3,7 +3,7 @@ import Navbar from "../components/common/Navbar";
 import ProductCard from "../components/common/ProductCard";
 import Footer from "../components/common/Footer";
 import { item } from "../data";
-import { FaFilter, FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 
 const CategoryPage = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -55,8 +55,8 @@ const CategoryPage = () => {
                                     key={category}
                                     onClick={() => setSelectedCategory(category)}
                                     className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${selectedCategory === category
-                                            ? 'bg-primary text-white shadow-lg scale-105'
-                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                        ? 'bg-primary text-white shadow-lg scale-105'
+                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                         }`}
                                 >
                                     {category}

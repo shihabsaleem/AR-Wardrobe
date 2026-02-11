@@ -116,10 +116,10 @@ const Hero = () => {
 
                             {/* Floating elements */}
                             <div className="hidden md:block absolute -top-4 -right-4 lg:-top-6 lg:-right-6 w-20 h-20 lg:w-24 lg:h-24 bg-primary/20 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center animate-float">
-                                <span className="text-2xl lg:text-3xl">👓</span>
+                                <span className="text-2xl lg:text-3xl text-center">👓</span>
                             </div>
                             <div className="hidden md:block absolute -bottom-4 -left-4 lg:-bottom-6 lg:-left-6 w-16 h-16 lg:w-20 lg:h-20 bg-primary-light/20 backdrop-blur-md rounded-2xl border border-white/10 flex items-center justify-center animate-float-delayed">
-                                <span className="text-xl lg:text-2xl">✨</span>
+                                <span className="text-xl lg:text-2xl text-center">✨</span>
                             </div>
                         </div>
                     </div>
